@@ -1,10 +1,16 @@
 import Button from "./partials/button"
+import languages from "../assets/languages"
+
+
 
 const Main = () => {
   return (
     <>
       <section id="buttons" className="d-flex justify-content-center">
-        <Button />
+        {languages.map(item => (
+          <Button key={item.id} data={item} />
+        ))}
+
       </section>
 
       <section id="description">
